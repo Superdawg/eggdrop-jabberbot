@@ -15,7 +15,7 @@
 # 
 # Created  : April 2003
 #
-# $Id: japrocs.tcl,v 1.1 2004/01/23 01:58:27 tim Exp $
+# $Id: japrocs.tcl,v 1.2 2004/01/25 23:42:40 tim Exp $
 #
 ##############################################################################
 
@@ -99,7 +99,7 @@ proc jabot:checkconn_cback {type data} {
 }
 
 proc jabot:checkconn {} {
-global jabot checkconn_sent checkconn_rcvd roster pres
+global jabot checkconn_sent checkconn_rcvd roster pres checkconn_tries
   # putlog "EggJaBot is checking connection"
 
   set icqjid "$jabot(ICQ)@icq.$jabot(host)"
@@ -112,10 +112,12 @@ global jabot checkconn_sent checkconn_rcvd roster pres
     putlog "J: $icqjid - R: $icqres - S: $icqstat"
     if {$checkconn_tries > $jabot(checkmaxtries)} {
       putlog "Reached maximum number of retries ($jabot(checkmaxtries)), will not reconnect."
+      return
     } else {
       timer 10 jabot:checkconn
       jabot:reconnect
-      set checkconn_tries $checkconn_tries+1
+      incr checkconn_tries
+      return
     }
   } else {
     # check Jabber overall status
@@ -123,13 +125,16 @@ global jabot checkconn_sent checkconn_rcvd roster pres
       if { !$checkconn_rcvd } {
         if {$checkconn_tries > $jabot(checkmaxtries)} {
           putlog "Jabber connection lost but maximum number of retries ($jabot(checkmaxtries)) reached. Will not reconnect."
+          return
         } else {
           timer 10 jabot:checkconn
           jabot:reconnect
+          incr checkconn_tries
         }
       } else {
         set checkconn_sent 0
         set checkconn_rcvd 0
+        set checkconn_tries 0
         timer 5 jabot:checkconn
       }
     } else {
