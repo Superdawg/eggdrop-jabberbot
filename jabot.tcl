@@ -15,14 +15,11 @@
 # 
 # Created  : April 2003
 #
-# $Id: jabot.tcl,v 1.1 2004/01/23 01:58:27 tim Exp $
+# $Id: jabot.tcl,v 1.2 2004/01/23 02:02:28 tim Exp $
 #
 ##############################################################################
 
 ###CONFIGSTART###
-
-# Where are you eggdrop scripts? This has to contain the jabber subdir
-set scriptsdir "/server/irc/eggdrop/scripts"
 
 # The name of your Eggdrop
 set jabot(name) "Fangorn"
@@ -78,8 +75,8 @@ set perleliza "/server/irc/eggdrop/scripts/jabber/eliza.pl"
 #
 # DO NOT CHANGE ANYTHING BELOW THIS LINE!
 
-source [file join $scriptsdir "jabber" "jabberlib" "jabberlib.tcl"]
-source [file join $scriptsdir "jabber" "japrocs.tcl"]
+source [file join [file dirname [info script]] "jabberlib" "jabberlib.tcl"]
+source [file join [file dirname [info script]] "japrocs.tcl"]
 
 package require jabberlib 0.8.2
 set supported_ims "JID ICQ"
