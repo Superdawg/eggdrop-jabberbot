@@ -15,11 +15,11 @@
 # 
 # Created  : April 2003
 #
-# $Id: japrocs.tcl,v 1.2 2004/01/25 23:42:40 tim Exp $
+# $Id: japrocs.tcl,v 1.3 2004/01/25 23:44:04 tim Exp $
 #
 ##############################################################################
 
-set jabot(version) "v0.3"
+set jabot(version) "v0.4"
 
 set roster(users) ""
 set pres(stat) "This is my presence"
@@ -61,7 +61,7 @@ global jabot
   set jabot(connected) 0
 
   if {$type == "OK"} {
-    putlog "EggJaBot: Logged in to Jabber host $jabot(host) successfully\n"
+    putlog "EggJaBot: Logged in to Jabber host $jabot(host) successfully"
 
     jlib::roster_get -command "client:roster"
     jlib::send_presence
