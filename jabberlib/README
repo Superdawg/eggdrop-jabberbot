@@ -1,0 +1,138 @@
+
+README for JabberLib 0.8.2
+
+
+$Header: /home/tim/cvs/palm/eggjabot/jabberlib/README,v 1.1 2004/01/23 01:58:27 tim Exp $
+
+-------------------------------------------------------------------
+JabberLib is an open source Tcl Jabber client library.  The software 
+is licensed under the LGPL and the project is hosted at 
+
+http://sourceforge.net/projects/tcljabber/
+
+
+See the file COPYING for the text of the license.
+
+
+
+CHANGELOG
+-------------------------------------------------------------------
+Changes for release 0.8.2 all by tbradley@jabber.com
+
+	* Added some comments to make the code easier to read
+
+	* Reformatted some code, again just for readability
+
+
+-------------------------------------------------------------------
+Changes up to release 0.8.1 from here down, all by Kerem HADIMLI 
+<waster@iname.com>
+
+
+	Waster - 19:29 GMT+0200 - 30 Apr 2000
+	  * Moved back to the old version of XML-parser. Now, it will work with
+	    Tcl8.0 and later.
+	  * Now, it doesn't search for childtags under <body/> tag. The
+	    "extbody" parameter is changed to a list, containg error_code and
+	    error_text of the message.
+	  * Modified wrapper.tcl to be able to use multiple XML streams at the
+	    same time. See wrapper:new (to create a new wrapper) and
+	    wrapper:parser (to access the XML-library's parser command) in
+	    wrapper.tcl.
+
+	Waster - 00:22 GMT+0200 - 31 Mar 2000
+	  * Lots of bugs fixes, etc, but I didn't add them to ChangeLog in the
+	    last month. Now it's fully compatible with 0.9 protocol, with all
+	    bugs fixed.
+	  * The main difference is, now it is using a newer version of the XML
+	    parsing library, which needs Tcl8.1 or a later version to run.
+
+	Waster - 19:16 GMT+0200 - 29 Feb 2000
+	  * It wasn't parsing the contents of the error tag in an error reply
+	    to a query correctly. Fixed.
+
+	Waster - 14:31 GMT+0200 - 26 Feb 2000
+	  * Now, incoming iq results don't need to have <query/> in them.
+
+	Waster - 01:37 GMT+0200 - 21 Jan 2000
+	  * It was checking jabber:iq:auth instead of jabber:iq:roster to
+	    understand roster-pushes from server. Fixed.
+
+	Waster - 15:50 GMT+0200 - 14 Jan 2000
+	  * Added jlib::clear_iqs procedure. It calls remaining iq-callbacks
+	    with "DISCONNECT" parameter when disconnected.
+
+	Waster - 03:44 GMT+0200 - 12 Jan 2000
+	  * Fixed lots of bugs in jlib::roster_get procedure. Now, roster_get
+	    works correctly.
+
+	Waster - 22:43 GMT+0200 - 10 Jan 2000
+	  * Tested with zABBER. Seems to work without problems.
+	  * Bugfixes.
+
+	Waster - 21:27 GMT+0200 - 08 Jan 2000
+	  * Small bugfixes.
+
+	Waster - 01:37 GMT+0200 - 02 Jan 2000
+	  * Made necessary changes for 0.8.1 protocol.
+
+	Waster - 00:24 GMT+0200 - 27 Dec 1999
+	  * First 0.8 release. Everything is rewritten since 0.7 one, and
+	    should work without any problems, but not tested yet.
+
+
+
+
+
+README for zABBER 0.8.2
+
+$CVSid$
+
+-------------------------------------------------------------------
+zABBER is an open source Tcl/Tk Jabber client.  The software is
+licensed under the GPL and the project is hosted at 
+
+http://sourceforge.net/projects/tcljabber/
+
+
+See the file COPYING for the text of the license.
+
+
+
+
+CHANGELOG
+-------------------------------------------------------------------
+Changes in release 0.8.2 (all from tbradley@jabber.com):
+
+	21 Sep 2000
+	
+	I think the original release numbering was meant to correspond to
+	the server versions.  Since server version 1.1 is now out, clearly
+	this numbering convention isn't valid anymore.  Also, the numbers
+	of jabberlib and zabber seem to be in sync.  I've incremented both
+	version numbers to 0.8.2, just so they remain in sync.
+
+	Changes to zABBER:
+
+	* removed priority spin button on message send window
+
+	* changed debug window to make it easier to read output 
+	  (added x scroller)
+
+	* changed window creation order so all windows appear on Windows
+
+	* renamed the "source" subdirectory to "contrib"--this contains 
+	  source libraries from other people
+
+	* removed extraneous files from "contrib"--there were some code
+	  libraries there that zABBER isn't using
+
+	* upgraded iniparse to 1.3.2 (from Waster, djsmoke, and infernix)
+
+	* upgraded combobox to 2.0b2 (from Bryan Oakley)
+
+	* added tons of comments in the source (especially zABBER) to 
+	  make it easier to read and understand the code
+
+
+
