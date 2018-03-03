@@ -674,10 +674,6 @@ proc jlib::send_auth {user pass res cmd} {
   variable lib
 
   ::LOG "(jlib::send_auth) username:'$user' password:'$pass' resource:'$res'"
-  set user "andy"
-  set pass "password"
-  set res "test"
-  ::LOG "test2 user: $user, pass: $pass, resource: $res"
   if { $lib(sckstats) == "off" } {
     ::LOG "error (jlib::send_auth) No connection"
     return -1
