@@ -7,14 +7,14 @@ $Header: /home/tim/cvs/palm/eggjabot/jabberlib/doc/reference.txt,v 1.1 2004/01/2
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
-This file documents the interface between the jabberlib library 
+This file documents the interface between the jabberlib library
 and whatever Jabber client uses it.
 
 
                  CLIENT TO JLIB PROCEDURES
 
 CONNECT:
-- To connect to a server, connect your socket to the server, if 
+- To connect to a server, connect your socket to the server, if
 	you want, do proxying, etc., and then call:
 
   jlib::connect $server_name $socket_id
