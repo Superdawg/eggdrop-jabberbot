@@ -5,8 +5,8 @@ README for JabberLib 0.8.2
 $Header: /home/tim/cvs/palm/eggjabot/jabberlib/README,v 1.1 2004/01/23 01:58:27 tim Exp $
 
 -------------------------------------------------------------------
-JabberLib is an open source Tcl Jabber client library.  The software 
-is licensed under the LGPL and the project is hosted at 
+JabberLib is an open source Tcl Jabber client library.  The software
+is licensed under the LGPL and the project is hosted at
 
 http://sourceforge.net/projects/tcljabber/
 
@@ -25,7 +25,7 @@ Changes for release 0.8.2 all by tbradley@jabber.com
 
 
 -------------------------------------------------------------------
-Changes up to release 0.8.1 from here down, all by Kerem HADIMLI 
+Changes up to release 0.8.1 from here down, all by Kerem HADIMLI
 <waster@iname.com>
 
 
@@ -90,7 +90,7 @@ $CVSid$
 
 -------------------------------------------------------------------
 zABBER is an open source Tcl/Tk Jabber client.  The software is
-licensed under the GPL and the project is hosted at 
+licensed under the GPL and the project is hosted at
 
 http://sourceforge.net/projects/tcljabber/
 
@@ -105,7 +105,7 @@ CHANGELOG
 Changes in release 0.8.2 (all from tbradley@jabber.com):
 
 	21 Sep 2000
-	
+
 	I think the original release numbering was meant to correspond to
 	the server versions.  Since server version 1.1 is now out, clearly
 	this numbering convention isn't valid anymore.  Also, the numbers
@@ -116,12 +116,12 @@ Changes in release 0.8.2 (all from tbradley@jabber.com):
 
 	* removed priority spin button on message send window
 
-	* changed debug window to make it easier to read output 
+	* changed debug window to make it easier to read output
 	  (added x scroller)
 
 	* changed window creation order so all windows appear on Windows
 
-	* renamed the "source" subdirectory to "contrib"--this contains 
+	* renamed the "source" subdirectory to "contrib"--this contains
 	  source libraries from other people
 
 	* removed extraneous files from "contrib"--there were some code
@@ -131,7 +131,7 @@ Changes in release 0.8.2 (all from tbradley@jabber.com):
 
 	* upgraded combobox to 2.0b2 (from Bryan Oakley)
 
-	* added tons of comments in the source (especially zABBER) to 
+	* added tons of comments in the source (especially zABBER) to
 	  make it easier to read and understand the code
 
 
